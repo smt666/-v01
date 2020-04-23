@@ -1,0 +1,25 @@
+server:
+  port: 7900
+
+spring:
+  application:
+    name: jt-cart-provider
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource    data-username: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/jtdb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 2453807X
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:password123@localhost:8761/eureka
+      
+mybatis:  configuration:    map-underscore-to-camel-case: true
+  type-aliases-package: cn.smt666.jt.pojo
+  mapper-locations: classpath:cn.smt666.jt.mapper/*.xml
+  
+mybatis-plus:  configuration:
+    map-underscore-to-camel-case: true
+    
+logging:  level:    cn.smt666.mapper: debug

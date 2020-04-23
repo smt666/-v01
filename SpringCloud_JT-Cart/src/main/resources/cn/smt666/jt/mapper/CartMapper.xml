@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.smt666.jt.mapper.CartMapper">
+	<!-- 演示。此方法完全可以不用在此处写，因为已经被MP替代了。除非SQL语句在MP中不存在才在此处位置手写SQL语句。 -->
+	<select id="myCart" parameterType="int" resultType="cn.smt666.jt.pojo.Cart">
+		select * from tb_cart where user_id=#{userId}
+	</select>
+</mapper>  
